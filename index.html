@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="Author" content="吴冬雪团队" />
+    <meta name="keywords" content="吴冬雪团队,html5,韩音乐">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>韩音乐 | 吴冬雪团队</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/tit.css">
+    <link rel="stylesheet" type="text/css" href="img/iconfont/iconfont.css" />
+    <link rel = "Shortcut Icon" href="img/logo.jpg">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <style type="text/css">
+</style>
+</head>
+<body>
+
+    <div id="main">
+
+        <!--header s-->
+        <div>
+            <section style="background: #3498db;">
+                <div class="h_main">
+                    <ul id="h_box_up">
+                        <li>
+                            嗨，欢迎来到韩音乐de空间
+                        </li>
+                        <li class="h_con_c">
+                            <i class="iconfont icon-tongzhi" style="vertical-align: middle;"></i>
+                            <span>空间不定时更新，修复bug，若打不开，错位等，请稍后再试</span>
+                        </li>
+                        <li class="h_con_r">
+                            <a href="" class="iconfont icon-github"></a>
+                            <a href="" class="iconfont icon-qq"></a>
+                            <a href="" class="iconfont icon-weixin">
+                                <span>
+                                    <img style="border-radius: 5px;" src="img/head-nav/h_ewm.png" alt="扫一扫，加博主微信" width="230" height="230"/>
+                                </span>
+                            </a>
+                            <a href="" class="iconfont icon-weibo"></a>
+                            <a href="" class="iconfont icon-youxiang"></a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!--search s-->
+            <header id="search">
+                <nav class="h_main search_con">
+                    <div class="search_logo" style="background: url(img/head-nav/logo.png) no-repeat;margin-top: -2px;"></div>
+                    <div id="search_nav">
+                        <ul style="position: relative;z-index: 2;">
+                            <li style="width: 32px;">
+                                <a href="#" class="cube">
+                                    <div class="font">首页</div>
+                                    <!--前面-->
+                                    <div class="bottom">首页</div>
+                                    <!--下面-->
+                                </a>
+                            </li>
+                            <li class="ul_list2" style="width: 52px;">
+                                <a href="韩音乐/index.html" class="cube">
+                                    <div class="font">音乐馆</div>
+                                    <div class="bottom">音乐馆</div>
+                                </a>
+                                <ul class="ul_list2_nav">
+                                    <li>
+                                        <a href="#">首页</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">歌手</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">专辑</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">排行榜</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">分类歌曲</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">电台</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">MV</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">数字专辑</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="ul_list2">
+                                <a href="#" class="cube">
+                                    <div class="font">我的音乐</div>
+                                    <div class="bottom">我的音乐</div>
+                                </a>
+                                <ul class="ul_list2_nav">
+                                    <li>
+                                        <a href="#">我喜欢</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">我创建的歌单</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">关注</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">粉丝</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">我上传的视频</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="Css3实现3D场景案例库特效/index.html" class="cube" target="_blank">
+                                    <div class="font">个性电台</div>
+                                    <div class="bottom">个性电台</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="cube">
+                                    <div class="font">音乐号</div>
+                                    <div class="bottom">音乐号</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="cube">
+                                    <div class="font">VIP</div>
+                                    <div class="bottom">VIP</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="Tz_header">
+                        <a href="#" class="btn log_btn btn_a1">登录</a>
+                        <a href="#" class="btn log_btn btn_a2">注册</a>
+                        <a href="#" class="log_wrap log_sig">签到</a>
+                        <span class="log_wrap log_ver">送518大礼包</span>
+                    </div>
+                    <div id="Tz_Login">
+                        <div class="title" id='title'>用户登录 <a href="#" class='close'></a></div>
+                        <div class="box">
+                            <div class="left">
+                                <div id="lg">
+                                    <form>
+                                        <p>账号:<input type="text" class='txt'/></p>
+                                        <p>密码:<input type="text" class='txt'/></p>
+                                        <p><input type="checkbox" class="check">记住我的状态 <span>找回密码</span></p>
+                                        <div class="reg">登录</div>
+                                    </form>
+                                    <div class="go"></div>
+                                </div>
+                            </div>
+                            <div class="right"></div>
+                        </div>
+                    </div>
+                </nav>
+                <div id="gray1"></div>
+            </header>
+            <!--吸顶效果-->
+            <script>
+                var head_offset = $('header').offset().top;
+                $(window).scroll(function() {
+                    var _top = $(window).scrollTop();
+                    (_top > head_offset) ? $('header').addClass('fixed search_copy'): $('header').removeClass('fixed');
+                });
+            </script>
+            <!--search e-->
+            <!--banner s-->
+            <div id="banner">
+                <div class="pic">
+                    <ul>
+                        <li style="display: block">
+                            <a href=""><img src="img/content/banner/pic1.jpg" alt=""></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="img/content/banner/pic2.jpg" alt=""></a>
+                        </li>
+                        <li>
+                            <a href=""><img src=" img/content/banner/pic3.jpg" alt=""></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="img/content/banner/pic4.jpg" alt=""></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="img/content/banner/pic5.jpg" alt=""></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="img/content/banner/pic6.jpg" alt=""></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab">
+                    <ul>
+                        <li class="on"></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="btn">
+                    <div class="left"> &lt; </div>
+                    <div class="right"> &gt; </div>
+                </div>
+            </div>
+            <!--banner e-->
+            <script type="text/javascript" src="js/banner.js"></script>
+            <!-- 菜单&侧边栏按钮 -->
+            <!--side start-->
+            <div class="side">
+                <ul>
+                    <li>
+                        <a href="http://wpa.qq.com/msgrd?v=3&uin=841368315&site=qq&menu=yes" target="_blank">
+                            <div class="sidebox"><img src="images/1.png" alt="#" width="54" height="54">客服中心</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://wpa.qq.com/msgrd?v=3&uin=841368315&site=qq&menu=yes" target="_blank">
+                            <div class="sidebox"><img src="images/2.png" alt="#" width="54" height="54">客户案例</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://wpa.qq.com/msgrd?v=3&uin=841368315&site=qq&menu=yes" target="_blank">
+                            <div class="sidebox"><img src="images/3.png" alt="#" width="54" height="54">新浪微博</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=841368315&site=qq&menu=yes">
+                            <div class="sidebox"><img src="images/4.png" alt="#" width="54" height="54">QQ客服</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <div class="sidetop"><img src="images/5.png" alt="#" width="54" height="54"></div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!--side end-->
+        </div>
+        <!--header  e-->
+
+        <!--content start-->
+        <div id="content">
+            <!--新闻 和 banner部分-->
+            <div id="news">
+                <!--banner-->
+                <div class="banner">
+                    <div class="pic">
+                        <ul>
+                            <li><a href="javascript:void(0)"><img src="img/index/content/1.jpg" alt="" width="360px" height="270px"></a></li>
+                            <li><a href="javascript:void(0)"><img src="img/index/content/2.jpg" alt="" width="360px" height="270px"></a></li>
+                            <li><a href="javascript:void(0)"><img src="img/index/content/3.jpg" alt="" width="360px" height="270px"></a></li>
+                            <li><a href="javascript:void(0)"><img src="img/index/content/4.jpg" alt="" width="360px" height="270px"></a></li>
+                            <li><a href="javascript:void(0)"><img src="img/index/content/5.jpg" alt="" width="360px" height="270px"></a></li>
+                        </ul>
+                    </div>
+                    <div class="tab">
+                        <ul>
+                            <li class="on"></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!--新闻-->
+                <div class="inform">
+                    <div class="tab">
+                        <ul>
+                            <li class="l1 on"><a href="javascript:void(0)"><i></i><span></span></a></li>
+                            <li class="l2"><a href="javascript:void(0)"><i></i><span></span><b></b></a></li>
+                            <li class="l3"><a href="javascript:void(0)"><i></i><span></span><b></b></a></li>
+                            <li class="l4"><a href="javascript:void(0)"><i></i><span></span><b></b></a></li>
+                            <li class="l5"><a href="javascript:void(0)"><i></i><span></span><b></b></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="show">
+                        <ul class="wrapUl">
+                            <li class="new wrapLi"></li>
+                            <li class="news wrapLi"></li>
+                            <li class="active wrapLi"></li>
+                            <li class="notice wrapLi"></li>
+                            <li class="media wrapLi"></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!--关注我-->
+                <aside class="r_box">
+                    <div class="tit01">
+                        <h3>关注我</h3>
+                        <div class="gzwm">
+                            <ul>
+                                <li><a class="xlwb" href="#" target="_blank">新浪微博</a></li>
+                                <li><a class="txwb" href="#" target="_blank">腾讯微博</a></li>
+                                <li><a class="rss" href="#" target="_blank">RSS</a></li>
+                                <li><a class="wx" href="#">邮箱</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="ad300x100"> <img src="img/index/article/tit01/ad300x100.gif" width="300" height="100"> </div>
+                </aside>
+            </div>
+        </div>
+        <!--content end-->
+
+        <!--character start-->
+        <div id="character">
+            <div class="sMain">
+                <hgroup class="con_article_title" style="">
+                    <h2>万千歌手，尽在眼前</h2>
+                    <div class="title_tab"><a href="">登录查看你的关注歌手</a></div>
+                    <a href="index.html" class="more">
+                        <i></i>立即登录
+                    </a>
+                </hgroup>
+                <!--对应的显示-->
+                <div class="showMain" style="float: left;margin-top: -44px;">
+                    <!--式神列表-->
+                    <div class="shishenTab">
+                        <ul>
+                            <li class="clickBtn on">全部</li>
+                            <li class="clickBtn">韩国男</li>
+                            <li class="clickBtn">韩国女</li>
+                            <li class="clickBtn">韩国组合</li>
+                            <li class="clickBtn">其他</li>
+                            <li class="allBtn"><a href="javascript:void(0)"><img src="img/index/content/viewAll_btn.png" alt=""></a></li>
+                        </ul>
+                    </div>
+                    <div class="mainList">
+                        <div class="mUl show">
+                            <ul class="ALL">
+                                <!-- <li class="ssList">
+                                     <div class="shishen">
+                                         <img src="img/index/content/shishen/201.png" alt="">
+                                         <p class="cover"><span>雪女</span></p>
+                                         <i class="new"></i>
+                                     </div>
+                                     <div class="shishen">
+                                         <img src="img/index/content/shishen/201.png" alt="">
+                                         <p class="cover"><span>雪女</span></p>
+                                         <i class="new"></i>
+                                     </div>
+                                 </li>-->
+                             </ul>
+
+                             <p class="btn left"></p>
+                             <p class="btn right"></p>
+                         </div>
+                         <div class="mUl">
+                            <ul class="SSR"></ul>
+                            <p class="btn left"></p>
+                            <p class="btn right"></p>
+                        </div>
+                        <div class="mUl">
+                            <ul class="SR"></ul>
+                            <p class="btn left"></p>
+                            <p class="btn right"></p>
+                        </div>
+                        <div class="mUl">
+                            <ul class="R"></ul>
+                            <p class="btn left"></p>
+                            <p class="btn right"></p>
+                        </div>
+                        <div class="mUl">
+                            <ul class="N"></ul>
+                            <p class="btn left"></p>
+                            <p class="btn right"></p>
+                        </div>
+                    </div>
+                </div>
+                <img src="img/index/content/banner-ios.png" style="float: right;width: 357px; height: 451px; margin-top: -85px;">
+            </div>
+        </div>
+        <!--character end-->
+
+        <!--strategy start-->
+        <hgroup class="con_article_title" style="margin: -136px 0px 15px;">
+            <h2>私人音乐空间，听我想听的音乐</h2>
+            <div class="title_tab"><a href="">登录管理我的音乐，多终端同步</a></div>
+            <a href="index.html" class="more">
+                <i></i>立即登录
+            </a>
+        </hgroup>
+        <div id="strategy">
+            <div class="leftPart">
+                <!--搜索框-->
+                <div class="search">
+                    <div class="sInp"><input type="text" placeholder="搜索音乐、MV、歌单、用户"></div>
+                    <div class="sBtn"></div>
+                </div>
+                <div class="bMain">
+                    <!--banner-->
+                    <div class="banner">
+                        <div class="pic">
+                            <ul>
+                                <li><a href="javascript:void(0)"></a><img src="img/index/strategy/banner1.jpg" alt="" width="368" height="228"></li>
+                                <li><a href="javascript:void(0)"></a><img src="img/index/strategy/banner2.jpg" alt="" width="368" height="228"></li>
+                            </ul>
+                        </div>
+                        <div class="tab">
+                            <ul>
+                                <li class="on"></li>
+                                <li></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--navLink-->
+                    <div class="navLink">
+                        <ul>
+                            <li class="l1"><a href="javascript:void(0)"><span></span><i></i></a></li>
+                            <li class="l2"><a href="javascript:void(0)"><span></span><i></i></a></li>
+                            <li class="l3"><a href="javascript:void(0)"><span></span><i></i></a></li>
+                            <li class="l4"><a href="javascript:void(0)"><span></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <iframe src="rightPart/rightPart.html" width="782" height="510" frameborder="0" scrolling="no" style="float: right;box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);background: url(img/index/video/video_bg.jpg) top center no-repeat;"></iframe>
+        </div>
+        <!--strategy end-->
+
+        <!--fan start-->
+        <div id="fan">
+            <div class="tab">
+                <div class="img"></div>
+                <div class="tabNav">
+                    <p class="line"></p>
+                    <ul>
+                        <li class="l1 on"><span>精选推荐</span><i></i></li>
+                        <li class="l2"><span>我是韩音迷</span><i></i></li>
+                        <li class="l3"><span>韩音飙升榜</span><i></i></li>
+                        <li class="l4"><span>韩音新歌榜</span><i></i></li>
+                        <li class="l5"><span>原创歌曲榜</span><i></i></li>
+                        <li class="l6"><span>要命的节奏控</span><i></i></li>
+                    </ul>
+                </div>
+                <a href="javascript:void(0)" class="goLink"></a>
+            </div>
+            <div class="mFan">
+                <div class="show">
+                    <!--<li>
+                        <div class="pic">
+                            <img src="img/index/fan/jxtj/1.jpg" alt="">
+                            <span><b></b></span>
+                        </div>
+                        <p class="sTitle">妖刀姬cos【作者】@押切YAKI</p>
+                    </li>-->
+                </div>
+            </div>
+        </div>
+        <!--fan end-->
+
+        <!--video start-->
+        <div id="video">
+            <div class="vMain">
+                <div class="leftVideo box">
+                    <ul>
+                        <li class="first">
+                            <i></i>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <img src="img/index/video/1.jpg" alt="">
+                            </div>
+                            <p class="dec">《韩音乐》BLACK DRESS</p>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <img src="img/index/video/2.jpg" alt="">
+                            </div>
+                            <p class="dec">《韩音乐》잘가라 (走好)</p>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <img src="img/index/video/3.jpg" alt="">
+                            </div>
+                            <p class="dec">【韩音乐】거짓말처럼 (像谎言一样)</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="rightWallpaper box">
+                    <ul>
+                        <li class="first">
+                            <i></i>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <img src="img/index/video/4.jpg" alt="">
+                            </div>
+                            <p class="dec">In Time</p>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <img src="img/index/video/5.jpg" alt="">
+                            </div>
+                            <p class="dec">열대야 (Self-cam ver.) (Tropical Night)</p>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <img src="img/index/video/6.jpg" alt="">
+                            </div>
+                            <p class="dec">Radio Romance (Sung by TAEIL, DOYOUNG)</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--video end-->
+
+        <!--activity start-->
+        <hgroup class="con_article_title">
+            <h2>活动专区 VIP</h2>
+            <div class="title_tab"><a href="" style="color: #31c27c;">特权与等级</a><a href="">最新活动</a><a href="">年费专区</a><a href="">付费音乐包</a></div>
+            <a href="index.html" class="more">
+                <i></i>全部活动
+            </a>
+        </hgroup>
+        <div id="activity">
+            <div class="left">
+                <img src="img/index/activity/activity_title1.gif" alt="">
+            </div>
+            <div class="right">
+                <ul>
+                    <li>
+                        <img src="img/index/activity/1.jpg" alt="">
+                        <div class="img_yinying">
+                            <p class="dec">1元秒杀</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/index/activity/2.jpg" alt="">
+                        <div class="img_yinying">
+                            <p class="dec">限时升级年费</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/index/activity/3.jpg" alt="">
+                        <div class="img_yinying">
+                            <p class="dec">花月费钱享年费</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/index/activity/4.jpg" alt="">
+                        <div class="img_yinying">
+                            <p class="dec">3元全盘秒杀</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/index/activity/5.jpg" alt="">
+                        <div class="img_yinying">
+                            <p class="dec">1800万份LOL永久皮肤限量送</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/index/activity/6.jpg" alt="">
+                        <div class="img_yinying">
+                            <p class="dec">英雄联盟合作项目</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--activity end-->
+
+        <!--contact start-->
+        <div id="contact">
+            <ul>
+                <li class="l1">
+                    <a href="javascript:void(0)"><img src="img/index/logo.png" alt=""></a>
+                </li>
+                <li class="l2 qrd">
+                    <p class="p1">关注官方微博</p>
+                    <p class="p2">扫描二维码</p>
+                    <p class="p3">官方微博</p>
+                    <p class="p4"><span></span>微博名：<a href="javascript:void(0)">韩音乐 W小雪同学</a></p>
+                    <div class="img"><img src="img/index/contact/wb.png" alt=""></div>
+                </li>
+                <li class="l3 qrd">
+                    <p class="p1">关注微信公众号</p>
+                    <p class="p2">扫描二维码</p>
+                    <p class="p3">微信公众号</p>
+                    <p class="p4">微信名：<a>韩音乐 小确幸</a></p>
+                    <div class="img"><img src="img/index/contact/ewm.jpg" alt=""></div>
+                </li>
+                <li class="l4">
+                    <i></i>
+                    <p class="p1">客户服务电话</p>
+                    <p class="p2">15147098280</p>
+                    <p class="p4"><span></span><a href="javascript:void(0)">问题反馈</a> <a href="javascript:void(0)">精灵咨询</a> </p>
+                </li>
+            </ul>
+        </div>
+        <!--contact end-->
+
+        <!--footer start-->
+        <div id="footer">
+            <p class="p1"></p>
+            <div class="hover">
+                <p class="p2"></p>
+                <p class="p3"></p>
+                <p class="p4"></p>
+                <div class="qrd">
+                    <div class="pic"><img src="img/ewm.jpg" alt=""></div>
+                    <div class="txt"></div>
+                </div>
+            </div>
+        </div>
+        <!--footer end-->
+    </div>
+
+    <script src="js/newData.js"></script>
+    <script src="js/shishenData.js"></script>
+    <script src="js/fanData.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,196 @@
+.rightPart {
+	width: 782px;
+	height: 100%;
+	font-size: 14px;
+	float: right;
+}
+
+.rightPart .tit {
+	padding: 10px 16px;
+	margin-right: 20px;
+	font-size: 18px;
+	border-radius: 6px;
+	color: #fff;
+}
+
+.rightPart h4.titlebar {
+	height: 30px;
+	font-size: 18px;
+	line-height: 30px;
+	font-weight: 700;
+	text-indent: 10px;
+	position: relative;
+	margin-bottom: 16px;
+}
+
+.rightPart h4.titlebar:before,
+.rightPart h4.titlebar:after {
+	content: "";
+	position: absolute;
+	display: block;
+	left: 0;
+}
+
+.rightPart h4.titlebar:before {
+	top: 5px;
+	width: 5px;
+	height: 20px;
+	background: #3498db;
+}
+
+.rightPart h4.titlebar:after {
+	top: 36px;
+	width: 100%;
+	border-top: 1px #ccc solid;
+}
+
+.rightPart #box {
+	overflow: hidden;
+	position: relative;
+	height: 441px;
+}
+
+.rightPart #box #box_list {
+	position: absolute;
+	width: 752px;
+}
+
+.rightPart #box #scroll {
+	position: absolute;
+	top: 0;
+	right: 2px;
+	width: 8px;
+	height: 100%;
+	border: 1px #d3d3d3 solid;
+	box-shadow: 0px 0px 3px #dfdfdf inset;
+	border-radius: 10px;
+	background: #eee;
+}
+
+.rightPart #box #scroll .bar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	border: 1px #808080 solid;
+	border-radius: 2px;
+	background: #999;
+}
+
+.rightPart .section_note {
+	padding: 0 15px;
+	width: 782px;
+	font-size: 14px;
+}
+.rightPart .noteinfo {
+	border-bottom: 1px #ccc solid;
+}
+.rightPart .noteinfo h2{
+	height: 35px;
+	line-height: 35px;
+	font-size: 18px;
+	cursor: pointer;
+}
+.rightPart .noteinfo .noteinfo_main {
+	padding: 15px;
+	background: #f9f9f9;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.rightPart .noteinfo .noteinfo_main .img220x150 {
+	display: inline-block;
+	height: 150px;
+	float: left;
+	overflow: hidden;
+}
+
+.rightPart .noteinfo .noteinfo_main .img220x150 img {
+	border-radius: 6px;
+	transition: 0.5s all;
+}
+
+.rightPart .noteinfo .noteinfo_main .img220x150 img:hover {
+	-webkit-transform: scale(1.07) translateZ(0);
+    -webkit-transition: -webkit-transform .75s cubic-bezier(0,1,.75,1);
+    transform: scale(1.07) translateZ(0);
+    transition: transform .75s cubic-bezier(0,1,.75,1);
+}
+
+.rightPart .noteinfo .noteinfo_main .label_top {
+	font-size: 12px;
+}
+
+.rightPart .noteinfo .noteinfo_main .label_top a {
+	color: #ff5931;
+	display: inline-block;
+	line-height: 24px;
+}
+.rightPart .noteinfo .noteinfo_main .label_top a:hover{
+	text-indent: 10px;
+	transition: .3s;
+}
+.rightPart .noteinfo .noteinfo_main .label_top a:nth-of-type(2) {
+	color: #1abc9c;
+}
+
+.rightPart .noteinfo .noteinfo_main .label_top i {
+	padding: 0 5px;
+	color: #a5a5a5;
+}
+
+.rightPart .noteinfo .noteinfo_main p {
+	color: #888;
+	line-height: 24px;
+	width: 530px;
+	height: 98px;
+	margin: 3px 0 3px;
+	overflow: hidden;
+}
+
+.rightPart .noteinfo .noteinfo_main a.label_bottom {
+	display: inline-block;
+	padding: 2px 5px;
+	border: 1px solid #3498db;
+	font-size: 12px;
+	color: #3498db;
+	transition: 0.5s all;
+}
+
+.rightPart .noteinfo .noteinfo_main a.label_bottom:hover {
+	background: #3498db;
+	color: #fff;
+}
+
+.rightPart .noteinfo .noteinfo_footer {
+	padding: 15px 0;
+}
+
+.rightPart .noteinfo .noteinfo_footer .label_footer {
+	margin-top: 5px;
+	height: 25px;
+	line-height: 25px;
+	float: left;
+}
+
+.rightPart .noteinfo .noteinfo_footer .label_footer li {
+	display: inline-block;
+	margin-right: 20px;
+	color: #999;
+	font-size: 13px;
+}
+
+.rightPart .noteinfo .noteinfo_footer .label_read {
+	padding: 8px 20px;
+	background: #3498db;
+	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06), 0 3px 10px rgba(0, 0, 0, 0.13);
+	transition: all .1s;
+	color: #fff;
+	border-radius: 6px;
+	float: right;
+}
+
+.rightPart .noteinfo .noteinfo_footer .label_read:hover {
+	background: #3498db;
+	opacity: .8;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.09), 0 4px 10px rgba(0, 0, 0, 0.17);
+}

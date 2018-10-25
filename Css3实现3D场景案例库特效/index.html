@@ -1,0 +1,177 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="Author" content="吴冬雪团队" />
+	<meta name="keywords" content="吴冬雪团队,html5,韩音乐">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<link rel = "Shortcut Icon" href="../img/logo.jpg">
+	<title>个性电台</title>
+	<style type='text/css'>
+	*{ margin:0; padding:0;}
+
+</style>
+<script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+
+</head>
+<body>
+
+	<div id="wrap">
+		<ul id="main">
+		</ul>
+
+		<ul id="styleBtn">
+			<li>Table</li>
+			<li>Sphere</li>
+			<li>Helix</li>
+			<li>Grid</li>
+		</ul>
+
+		<div id="show">
+			<div class="s-title"></div>
+			<div class="s-img"><img src=""></div>
+			<div class="s-author"></div>
+			<div class="s-dec"></div>
+		</div>
+	</div>
+
+	<div id="frame">
+		<iframe src="" frameborder='0' width="100%" height="100%"></iframe>
+		<div id="back">Back</div>
+	</div>
+
+	<script type="text/javascript">
+		var demoArr = [
+		{title:'胜利',author:'승리 胜利',date:'1990.12.12',kt:'歌手电台-梦想的声音',src:'img/singer/4.jpg',ms:'简介：李胜贤(Lee Seung hyun)，本名李昇炫，艺名승리(胜利)，1990年12月12日出生于光州，韩国歌手、演员、主持人。演唱组合BIGBANG成员。 '},
+		{title:'泰妍',author:'泰妍',date:'1989.3.9',kt:'歌手电台-梦想的声音',src:'img/singer/6.jpg',ms:'简介：태연(泰妍)，1989年3月9日出生于韩国全罗北道全州市，韩国女歌手、主持人，女子演唱团体少女时代成员之一。2004年在第八届SM青少年选拔大赛歌王中夺得第一名，进入韩国SM娱乐有限公司开始练习生生涯。2007年8月以演唱团体少女时代成员身份正式出道。'},
+		{title:'胜利',author:'승리 胜利',date:'1990.12.12',kt:'歌手电台-梦想的声音',src:'img/singer/4.jpg',ms:'简介：李胜贤(Lee Seung hyun)，本名李昇炫，艺名승리(胜利)，1990年12月12日出生于光州，韩国歌手、演员、主持人。演唱组合BIGBANG成员。 '},
+		{title:'G-D',author:'权志龙',date:'1988.8.18',kt:'歌手电台-梦想的声音',src:'img/singer/1.jpg',ms:'G-DRAGON(权志龙)，1988年8月18日出生于韩国首尔，韩国男歌手，男子演唱组合BIGBANG队长。现今为韩国YG Entertainment公司主要制作人之一。'},
+		{title:'G-D',author:'权志龙',date:'1988.8.18',kt:'歌手电台-梦想的声音',src:'img/singer/1.jpg',ms:'G-DRAGON(权志龙)，1988年8月18日出生于韩国首尔，韩国男歌手，男子演唱组合BIGBANG队长。现今为韩国YG Entertainment公司主要制作人之一。'},
+		{title:'胜利',author:'승리 胜利',date:'1990.12.12',kt:'歌手电台-梦想的声音',src:'img/singer/4.jpg',ms:'简介：李胜贤(Lee Seung hyun)，本名李昇炫，艺名승리(胜利)，1990年12月12日出生于光州，韩国歌手、演员、主持人。演唱组合BIGBANG成员。 '},
+		{title:'찬열',author:'朴灿烈',date:'韩国首尔',kt:'歌手电台-梦想的声音',src:'img/singer/3.jpg',ms:'简介：찬열(灿烈)，本名朴灿烈，1992年11月27日出生于韩国首尔，韩国男子演唱组合EXO成员，歌手、演员。2008年，通过参加S.M. Casting System，成功入选并进入SM Entertainment公司成为旗下练习生。2012年2月23日，公开预告teaser，以EXO成员亮相；4月8日，所属组合发行首张迷你专辑《MAMA》，以歌手身份正式出道。'},
+		{title:'G-D',author:'权志龙',date:'1988.8.18',kt:'歌手电台-梦想的声音',src:'img/singer/1.jpg',ms:'G-DRAGON(权志龙)，1988年8月18日出生于韩国首尔，韩国男歌手，男子演唱组合BIGBANG队长。现今为韩国YG Entertainment公司主要制作人之一。'},
+		{title:'胜利',author:'승리 胜利',date:'1990.12.12',kt:'歌手电台-梦想的声音',src:'img/singer/4.jpg',ms:'简介：李胜贤(Lee Seung hyun)，本名李昇炫，艺名승리(胜利)，1990年12月12日出生于光州，韩国歌手、演员、主持人。演唱组合BIGBANG成员。 '},
+		{title:'G-D',author:'权志龙',date:'1988.8.18',kt:'歌手电台-梦想的声音',src:'img/singer/1.jpg',ms:'G-DRAGON(权志龙)，1988年8月18日出生于韩国首尔，韩国男歌手，男子演唱组合BIGBANG队长。现今为韩国YG Entertainment公司主要制作人之一。'},
+		{title:'胜利',author:'승리 胜利',date:'1990.12.12',kt:'歌手电台-梦想的声音',src:'img/singer/4.jpg',ms:'简介：李胜贤(Lee Seung hyun)，本名李昇炫，艺名승리(胜利)，1990年12月12日出生于光州，韩国歌手、演员、主持人。演唱组合BIGBANG成员。 '},
+		{title:'G-D',author:'权志龙',date:'1988.8.18',kt:'歌手电台-梦想的声音',src:'img/singer/1.jpg',ms:'G-DRAGON(权志龙)，1988年8月18日出生于韩国首尔，韩国男歌手，男子演唱组合BIGBANG队长。现今为韩国YG Entertainment公司主要制作人之一。'},
+		{title:'泰妍',author:'泰妍',date:'1989.3.9',kt:'歌手电台-梦想的声音',src:'img/singer/6.jpg',ms:'简介：태연(泰妍)，1989年3月9日出生于韩国全罗北道全州市，韩国女歌手、主持人，女子演唱团体少女时代成员之一。2004年在第八届SM青少年选拔大赛歌王中夺得第一名，进入韩国SM娱乐有限公司开始练习生生涯。2007年8月以演唱团体少女时代成员身份正式出道。'},
+		{title:'胜利',author:'승리 胜利',date:'1990.12.12',kt:'歌手电台-梦想的声音',src:'img/singer/4.jpg',ms:'简介：李胜贤(Lee Seung hyun)，本名李昇炫，艺名승리(胜利)，1990年12月12日出生于光州，韩国歌手、演员、主持人。演唱组合BIGBANG成员。 '},
+		{title:'G-D',author:'权志龙',date:'1988.8.18',kt:'歌手电台-梦想的声音',src:'img/singer/1.jpg',ms:'G-DRAGON(权志龙)，1988年8月18日出生于韩国首尔，韩国男歌手，男子演唱组合BIGBANG队长。现今为韩国YG Entertainment公司主要制作人之一。'},
+		{title:'胜利',author:'승리 胜利',date:'1990.12.12',kt:'歌手电台-梦想的声音',src:'img/singer/4.jpg',ms:'简介：李胜贤(Lee Seung hyun)，本名李昇炫，艺名승리(胜利)，1990年12月12日出生于光州，韩国歌手、演员、主持人。演唱组合BIGBANG成员。 '},
+		{title:'G-D',author:'权志龙',date:'1988.8.18',kt:'歌手电台-梦想的声音',src:'img/singer/1.jpg',ms:'G-DRAGON(权志龙)，1988年8月18日出生于韩国首尔，韩国男歌手，男子演唱组合BIGBANG队长。现今为韩国YG Entertainment公司主要制作人之一。'},
+		{title:'현아',author:'金泫雅',date:'1992.6.6',kt:'歌手电台-梦想的声音',src:'img/singer/5.jpg',ms:'简介：현아(泫雅)，本名为金泫雅，1992年6月6日出生于韩国首尔，韩国女歌手、主持人、舞者，前女子演唱组合4MINUTE成员。2007年以演唱组合Wonder Girls出道，其后因身体问题退出组合，被迫休养。2009年重返演艺圈，以4MINUTE组合再次出道，担任Rapper以及副领舞的职务。'},
+		{title:'G-D',author:'权志龙',date:'1988.8.18',kt:'歌手电台-梦想的声音',src:'img/singer/1.jpg',ms:'G-DRAGON(权志龙)，1988年8月18日出生于韩国首尔，韩国男歌手，男子演唱组合BIGBANG队长。现今为韩国YG Entertainment公司主要制作人之一。'},
+		{title:'G-D',author:'权志龙',date:'1988.8.18',kt:'歌手电台-梦想的声音',src:'img/singer/1.jpg',ms:'G-DRAGON(权志龙)，1988年8月18日出生于韩国首尔，韩国男歌手，男子演唱组合BIGBANG队长。现今为韩国YG Entertainment公司主要制作人之一。'},
+		{title:'胜利',author:'승리 胜利',date:'1990.12.12',kt:'歌手电台-梦想的声音',src:'img/singer/4.jpg',ms:'简介：李胜贤(Lee Seung hyun)，本名李昇炫，艺名승리(胜利)，1990年12月12日出生于光州，韩国歌手、演员、主持人。演唱组合BIGBANG成员。 '},
+		{title:'찬열',author:'朴灿烈',date:'韩国首尔',kt:'歌手电台-梦想的声音',src:'img/singer/3.jpg',ms:'简介：찬열(灿烈)，本名朴灿烈，1992年11月27日出生于韩国首尔，韩国男子演唱组合EXO成员，歌手、演员。2008年，通过参加S.M. Casting System，成功入选并进入SM Entertainment公司成为旗下练习生。2012年2月23日，公开预告teaser，以EXO成员亮相；4月8日，所属组合发行首张迷你专辑《MAMA》，以歌手身份正式出道。'},
+		{title:'泰妍',author:'泰妍',date:'1989.3.9',kt:'歌手电台-梦想的声音',src:'img/singer/6.jpg',ms:'简介：태연(泰妍)，1989年3月9日出生于韩国全罗北道全州市，韩国女歌手、主持人，女子演唱团体少女时代成员之一。2004年在第八届SM青少年选拔大赛歌王中夺得第一名，进入韩国SM娱乐有限公司开始练习生生涯。2007年8月以演唱团体少女时代成员身份正式出道。'},
+		{title:'胜利',author:'승리 胜利',date:'1990.12.12',kt:'歌手电台-梦想的声音',src:'img/singer/4.jpg',ms:'简介：李胜贤(Lee Seung hyun)，本名李昇炫，艺名승리(胜利)，1990年12月12日出生于光州，韩国歌手、演员、主持人。演唱组合BIGBANG成员。 '},
+		{title:'G-D',author:'权志龙',date:'1988.8.18',kt:'歌手电台-梦想的声音',src:'img/singer/1.jpg',ms:'G-DRAGON(权志龙)，1988年8月18日出生于韩国首尔，韩国男歌手，男子演唱组合BIGBANG队长。现今为韩国YG Entertainment公司主要制作人之一。'},
+		{title:'G-D',author:'权志龙',date:'1988.8.18',kt:'歌手电台-梦想的声音',src:'img/singer/1.jpg',ms:'G-DRAGON(权志龙)，1988年8月18日出生于韩国首尔，韩国男歌手，男子演唱组合BIGBANG队长。现今为韩国YG Entertainment公司主要制作人之一。'},
+		{title:'찬열',author:'朴灿烈',date:'韩国首尔',kt:'歌手电台-梦想的声音',src:'img/singer/3.jpg',ms:'简介：찬열(灿烈)，本名朴灿烈，1992年11月27日出生于韩国首尔，韩国男子演唱组合EXO成员，歌手、演员。2008年，通过参加S.M. Casting System，成功入选并进入SM Entertainment公司成为旗下练习生。2012年2月23日，公开预告teaser，以EXO成员亮相；4月8日，所属组合发行首张迷你专辑《MAMA》，以歌手身份正式出道。'},
+		{title:'현아',author:'金泫雅',date:'1992.6.6',kt:'歌手电台-梦想的声音',src:'img/singer/5.jpg',ms:'简介：현아(泫雅)，本名为金泫雅，1992年6月6日出生于韩国首尔，韩国女歌手、主持人、舞者，前女子演唱组合4MINUTE成员。2007年以演唱组合Wonder Girls出道，其后因身体问题退出组合，被迫休养。2009年重返演艺圈，以4MINUTE组合再次出道，担任Rapper以及副领舞的职务。'},
+		{title:'G-D',author:'权志龙',date:'1988.8.18',kt:'歌手电台-梦想的声音',src:'img/singer/1.jpg',ms:'G-DRAGON(权志龙)，1988年8月18日出生于韩国首尔，韩国男歌手，男子演唱组合BIGBANG队长。现今为韩国YG Entertainment公司主要制作人之一。'},
+		{title:'太阳',author:'东永裴',date:'1988.5.18',kt:'歌手电台-梦想的声音',src:'img/singer/2.jpg',ms:'简介：东永裴(동영배)，本名董永培，艺名太阳(태양)，1988年5月18日出生于韩国京畿道议政府市，韩国男歌手，男子演唱组合BIGBANG成员之一。2006年以演唱组合BIGBANG正式出道。'},
+		{title:'胜利',author:'승리 胜利',date:'1990.12.12',kt:'歌手电台-梦想的声音',src:'img/singer/4.jpg',ms:'简介：李胜贤(Lee Seung hyun)，本名李昇炫，艺名승리(胜利)，1990年12月12日出生于光州，韩国歌手、演员、主持人。演唱组合BIGBANG成员。 '},
+		{title:'찬열',author:'朴灿烈',date:'韩国首尔',kt:'歌手电台-梦想的声音',src:'img/singer/3.jpg',ms:'简介：찬열(灿烈)，本名朴灿烈，1992年11月27日出生于韩国首尔，韩国男子演唱组合EXO成员，歌手、演员。2008年，通过参加S.M. Casting System，成功入选并进入SM Entertainment公司成为旗下练习生。2012年2月23日，公开预告teaser，以EXO成员亮相；4月8日，所属组合发行首张迷你专辑《MAMA》，以歌手身份正式出道。'},
+		{title:'泰妍',author:'泰妍',date:'1989.3.9',kt:'歌手电台-梦想的声音',src:'img/singer/6.jpg',ms:'简介：태연(泰妍)，1989年3月9日出生于韩国全罗北道全州市，韩国女歌手、主持人，女子演唱团体少女时代成员之一。2004年在第八届SM青少年选拔大赛歌王中夺得第一名，进入韩国SM娱乐有限公司开始练习生生涯。2007年8月以演唱团体少女时代成员身份正式出道。'},
+		{title:'G-D',author:'权志龙',date:'1988.8.18',kt:'歌手电台-梦想的声音',src:'img/singer/1.jpg',ms:'G-DRAGON(权志龙)，1988年8月18日出生于韩国首尔，韩国男歌手，男子演唱组合BIGBANG队长。现今为韩国YG Entertainment公司主要制作人之一。'},
+		{title:'G-D',author:'权志龙',date:'1988.8.18',kt:'歌手电台-梦想的声音',src:'img/singer/1.jpg',ms:'G-DRAGON(权志龙)，1988年8月18日出生于韩国首尔，韩国男歌手，男子演唱组合BIGBANG队长。现今为韩国YG Entertainment公司主要制作人之一。'},
+		{title:'胜利',author:'승리 胜利',date:'1990.12.12',kt:'歌手电台-梦想的声音',src:'img/singer/4.jpg',ms:'简介：李胜贤(Lee Seung hyun)，本名李昇炫，艺名승리(胜利)，1990年12月12日出生于光州，韩国歌手、演员、主持人。演唱组合BIGBANG成员。 '},
+		{title:'찬열',author:'朴灿烈',date:'韩国首尔',kt:'歌手电台-梦想的声音',src:'img/singer/3.jpg',ms:'简介：찬열(灿烈)，本名朴灿烈，1992年11月27日出生于韩国首尔，韩国男子演唱组合EXO成员，歌手、演员。2008年，通过参加S.M. Casting System，成功入选并进入SM Entertainment公司成为旗下练习生。2012年2月23日，公开预告teaser，以EXO成员亮相；4月8日，所属组合发行首张迷你专辑《MAMA》，以歌手身份正式出道。'},
+		{title:'현아',author:'金泫雅',date:'1992.6.6',kt:'歌手电台-梦想的声音',src:'img/singer/5.jpg',ms:'简介：현아(泫雅)，本名为金泫雅，1992年6月6日出生于韩国首尔，韩国女歌手、主持人、舞者，前女子演唱组合4MINUTE成员。2007年以演唱组合Wonder Girls出道，其后因身体问题退出组合，被迫休养。2009年重返演艺圈，以4MINUTE组合再次出道，担任Rapper以及副领舞的职务。'},
+		{title:'泰妍',author:'泰妍',date:'1989.3.9',kt:'歌手电台-梦想的声音',src:'img/singer/6.jpg',ms:'简介：태연(泰妍)，1989年3月9日出生于韩国全罗北道全州市，韩国女歌手、主持人，女子演唱团体少女时代成员之一。2004年在第八届SM青少年选拔大赛歌王中夺得第一名，进入韩国SM娱乐有限公司开始练习生生涯。2007年8月以演唱团体少女时代成员身份正式出道。'},
+		{title:'G-D',author:'权志龙',date:'1988.8.18',kt:'歌手电台-梦想的声音',src:'img/singer/1.jpg',ms:'G-DRAGON(权志龙)，1988年8月18日出生于韩国首尔，韩国男歌手，男子演唱组合BIGBANG队长。现今为韩国YG Entertainment公司主要制作人之一。'},
+		{title:'胜利',author:'승리 胜利',date:'1990.12.12',kt:'歌手电台-梦想的声音',src:'img/singer/4.jpg',ms:'简介：李胜贤(Lee Seung hyun)，本名李昇炫，艺名승리(胜利)，1990年12月12日出生于光州，韩国歌手、演员、主持人。演唱组合BIGBANG成员。 '},
+		{title:'찬열',author:'朴灿烈',date:'韩国首尔',kt:'歌手电台-梦想的声音',src:'img/singer/3.jpg',ms:'简介：찬열(灿烈)，本名朴灿烈，1992年11月27日出生于韩国首尔，韩国男子演唱组合EXO成员，歌手、演员。2008年，通过参加S.M. Casting System，成功入选并进入SM Entertainment公司成为旗下练习生。2012年2月23日，公开预告teaser，以EXO成员亮相；4月8日，所属组合发行首张迷你专辑《MAMA》，以歌手身份正式出道。'},
+		{title:'泰妍',author:'泰妍',date:'1989.3.9',kt:'歌手电台-梦想的声音',src:'img/singer/6.jpg',ms:'简介：태연(泰妍)，1989年3月9日出生于韩国全罗北道全州市，韩国女歌手、主持人，女子演唱团体少女时代成员之一。2004年在第八届SM青少年选拔大赛歌王中夺得第一名，进入韩国SM娱乐有限公司开始练习生生涯。2007年8月以演唱团体少女时代成员身份正式出道。'},
+		{title:'胜利',author:'승리 胜利',date:'1990.12.12',kt:'歌手电台-梦想的声音',src:'img/singer/4.jpg',ms:'简介：李胜贤(Lee Seung hyun)，本名李昇炫，艺名승리(胜利)，1990年12月12日出生于光州，韩国歌手、演员、主持人。演唱组合BIGBANG成员。 '},
+		{title:'G-D',author:'权志龙',date:'1988.8.18',kt:'歌手电台-梦想的声音',src:'img/singer/1.jpg',ms:'G-DRAGON(权志龙)，1988年8月18日出生于韩国首尔，韩国男歌手，男子演唱组合BIGBANG队长。现今为韩国YG Entertainment公司主要制作人之一。'},
+		{title:'胜利',author:'승리 胜利',date:'1990.12.12',kt:'歌手电台-梦想的声音',src:'img/singer/4.jpg',ms:'简介：李胜贤(Lee Seung hyun)，本名李昇炫，艺名승리(胜利)，1990年12月12日出生于光州，韩国歌手、演员、主持人。演唱组合BIGBANG成员。 '},
+		{title:'찬열',author:'朴灿烈',date:'韩国首尔',kt:'歌手电台-梦想的声音',src:'img/singer/3.jpg',ms:'简介：찬열(灿烈)，本名朴灿烈，1992年11月27日出生于韩国首尔，韩国男子演唱组合EXO成员，歌手、演员。2008年，通过参加S.M. Casting System，成功入选并进入SM Entertainment公司成为旗下练习生。2012年2月23日，公开预告teaser，以EXO成员亮相；4月8日，所属组合发行首张迷你专辑《MAMA》，以歌手身份正式出道。'},
+		{title:'현아',author:'金泫雅',date:'1992.6.6',kt:'歌手电台-梦想的声音',src:'img/singer/5.jpg',ms:'简介：현아(泫雅)，本名为金泫雅，1992年6月6日出生于韩国首尔，韩国女歌手、主持人、舞者，前女子演唱组合4MINUTE成员。2007年以演唱组合Wonder Girls出道，其后因身体问题退出组合，被迫休养。2009年重返演艺圈，以4MINUTE组合再次出道，担任Rapper以及副领舞的职务。'},
+		{title:'泰妍',author:'泰妍',date:'1989.3.9',kt:'歌手电台-梦想的声音',src:'img/singer/6.jpg',ms:'简介：태연(泰妍)，1989年3月9日出生于韩国全罗北道全州市，韩国女歌手、主持人，女子演唱团体少女时代成员之一。2004年在第八届SM青少年选拔大赛歌王中夺得第一名，进入韩国SM娱乐有限公司开始练习生生涯。2007年8月以演唱团体少女时代成员身份正式出道。'},
+		{title:'太阳',author:'东永裴',date:'1988.5.18',kt:'歌手电台-梦想的声音',src:'img/singer/2.jpg',ms:'简介：东永裴(동영배)，本名董永培，艺名太阳(태양)，1988年5月18日出生于韩国京畿道议政府市，韩国男歌手，男子演唱组合BIGBANG成员之一。2006年以演唱组合BIGBANG正式出道。'},
+		{title:'G-D',author:'权志龙',date:'1988.8.18',kt:'歌手电台-梦想的声音',src:'img/singer/1.jpg',ms:'G-DRAGON(权志龙)，1988年8月18日出生于韩国首尔，韩国男歌手，男子演唱组合BIGBANG队长。现今为韩国YG Entertainment公司主要制作人之一。'},
+		{title:'찬열',author:'朴灿烈',date:'韩国首尔',kt:'歌手电台-梦想的声音',src:'img/singer/3.jpg',ms:'简介：찬열(灿烈)，本名朴灿烈，1992年11月27日出生于韩国首尔，韩国男子演唱组合EXO成员，歌手、演员。2008年，通过参加S.M. Casting System，成功入选并进入SM Entertainment公司成为旗下练习生。2012年2月23日，公开预告teaser，以EXO成员亮相；4月8日，所属组合发行首张迷你专辑《MAMA》，以歌手身份正式出道。'},
+		{title:'泰妍',author:'泰妍',date:'1989.3.9',kt:'歌手电台-梦想的声音',src:'img/singer/6.jpg',ms:'简介：태연(泰妍)，1989年3月9日出生于韩国全罗北道全州市，韩国女歌手、主持人，女子演唱团体少女时代成员之一。2004年在第八届SM青少年选拔大赛歌王中夺得第一名，进入韩国SM娱乐有限公司开始练习生生涯。2007年8月以演唱团体少女时代成员身份正式出道。'},
+		{title:'胜利',author:'승리 胜利',date:'1990.12.12',kt:'歌手电台-梦想的声音',src:'img/singer/4.jpg',ms:'简介：李胜贤(Lee Seung hyun)，本名李昇炫，艺名승리(胜利)，1990年12月12日出生于光州，韩国歌手、演员、主持人。演唱组合BIGBANG成员。 '},
+		{title:'G-D',author:'权志龙',date:'1988.8.18',kt:'歌手电台-梦想的声音',src:'img/singer/1.jpg',ms:'G-DRAGON(权志龙)，1988年8月18日出生于韩国首尔，韩国男歌手，男子演唱组合BIGBANG队长。现今为韩国YG Entertainment公司主要制作人之一。'},
+		{title:'胜利',author:'승리 胜利',date:'1990.12.12',kt:'歌手电台-梦想的声音',src:'img/singer/4.jpg',ms:'简介：李胜贤(Lee Seung hyun)，本名李昇炫，艺名승리(胜利)，1990年12月12日出生于光州，韩国歌手、演员、主持人。演唱组合BIGBANG成员。 '},
+		{title:'찬열',author:'朴灿烈',date:'韩国首尔',kt:'歌手电台-梦想的声音',src:'img/singer/3.jpg',ms:'简介：찬열(灿烈)，本名朴灿烈，1992年11月27日出生于韩国首尔，韩国男子演唱组合EXO成员，歌手、演员。2008年，通过参加S.M. Casting System，成功入选并进入SM Entertainment公司成为旗下练习生。2012年2月23日，公开预告teaser，以EXO成员亮相；4月8日，所属组合发行首张迷你专辑《MAMA》，以歌手身份正式出道。'},
+		{title:'현아',author:'金泫雅',date:'1992.6.6',kt:'歌手电台-梦想的声音',src:'img/singer/5.jpg',ms:'简介：현아(泫雅)，本名为金泫雅，1992年6月6日出生于韩国首尔，韩国女歌手、主持人、舞者，前女子演唱组合4MINUTE成员。2007年以演唱组合Wonder Girls出道，其后因身体问题退出组合，被迫休养。2009年重返演艺圈，以4MINUTE组合再次出道，担任Rapper以及副领舞的职务。'},
+		{title:'泰妍',author:'泰妍',date:'1989.3.9',kt:'歌手电台-梦想的声音',src:'img/singer/6.jpg',ms:'简介：태연(泰妍)，1989年3月9日出生于韩国全罗北道全州市，韩国女歌手、主持人，女子演唱团体少女时代成员之一。2004年在第八届SM青少年选拔大赛歌王中夺得第一名，进入韩国SM娱乐有限公司开始练习生生涯。2007年8月以演唱团体少女时代成员身份正式出道。'},
+		{title:'太阳',author:'东永裴',date:'1988.5.18',kt:'歌手电台-梦想的声音',src:'img/singer/2.jpg',ms:'简介：东永裴(동영배)，本名董永培，艺名太阳(태양)，1988年5月18日出生于韩国京畿道议政府市，韩国男歌手，男子演唱组合BIGBANG成员之一。2006年以演唱组合BIGBANG正式出道。'},
+		{title:'胜利',author:'승리 胜利',date:'1990.12.12',kt:'歌手电台-梦想的声音',src:'img/singer/4.jpg',ms:'简介：李胜贤(Lee Seung hyun)，本名李昇炫，艺名승리(胜利)，1990年12月12日出生于光州，韩国歌手、演员、主持人。演唱组合BIGBANG成员。 '},
+		{title:'찬열',author:'朴灿烈',date:'韩国首尔',kt:'歌手电台-梦想的声音',src:'img/singer/3.jpg',ms:'简介：찬열(灿烈)，本名朴灿烈，1992年11月27日出生于韩国首尔，韩国男子演唱组合EXO成员，歌手、演员。2008年，通过参加S.M. Casting System，成功入选并进入SM Entertainment公司成为旗下练习生。2012年2月23日，公开预告teaser，以EXO成员亮相；4月8日，所属组合发行首张迷你专辑《MAMA》，以歌手身份正式出道。'},
+		{title:'泰妍',author:'泰妍',date:'1989.3.9',kt:'歌手电台-梦想的声音',src:'img/singer/6.jpg',ms:'简介：태연(泰妍)，1989年3月9日出生于韩国全罗北道全州市，韩国女歌手、主持人，女子演唱团体少女时代成员之一。2004年在第八届SM青少年选拔大赛歌王中夺得第一名，进入韩国SM娱乐有限公司开始练习生生涯。2007年8月以演唱团体少女时代成员身份正式出道。'},
+		{title:'胜利',author:'승리 胜利',date:'1990.12.12',kt:'歌手电台-梦想的声音',src:'img/singer/4.jpg',ms:'简介：李胜贤(Lee Seung hyun)，本名李昇炫，艺名승리(胜利)，1990年12月12日出生于光州，韩国歌手、演员、主持人。演唱组合BIGBANG成员。 '},
+		{title:'G-D',author:'权志龙',date:'1988.8.18',kt:'歌手电台-梦想的声音',src:'img/singer/1.jpg',ms:'G-DRAGON(权志龙)，1988年8月18日出生于韩国首尔，韩国男歌手，男子演唱组合BIGBANG队长。现今为韩国YG Entertainment公司主要制作人之一。'},
+		{title:'胜利',author:'승리 胜利',date:'1990.12.12',kt:'歌手电台-梦想的声音',src:'img/singer/4.jpg',ms:'简介：李胜贤(Lee Seung hyun)，本名李昇炫，艺名승리(胜利)，1990年12月12日出生于光州，韩国歌手、演员、主持人。演唱组合BIGBANG成员。 '},
+		{title:'찬열',author:'朴灿烈',date:'韩国首尔',kt:'歌手电台-梦想的声音',src:'img/singer/3.jpg',ms:'简介：찬열(灿烈)，本名朴灿烈，1992年11月27日出生于韩国首尔，韩国男子演唱组合EXO成员，歌手、演员。2008年，通过参加S.M. Casting System，成功入选并进入SM Entertainment公司成为旗下练习生。2012年2月23日，公开预告teaser，以EXO成员亮相；4月8日，所属组合发行首张迷你专辑《MAMA》，以歌手身份正式出道。'},
+		{title:'현아',author:'金泫雅',date:'1992.6.6',kt:'歌手电台-梦想的声音',src:'img/singer/5.jpg',ms:'简介：현아(泫雅)，本名为金泫雅，1992年6月6日出生于韩国首尔，韩国女歌手、主持人、舞者，前女子演唱组合4MINUTE成员。2007年以演唱组合Wonder Girls出道，其后因身体问题退出组合，被迫休养。2009年重返演艺圈，以4MINUTE组合再次出道，担任Rapper以及副领舞的职务。'},
+		{title:'泰妍',author:'泰妍',date:'1989.3.9',kt:'歌手电台-梦想的声音',src:'img/singer/6.jpg',ms:'简介：태연(泰妍)，1989年3月9日出生于韩国全罗北道全州市，韩国女歌手、主持人，女子演唱团体少女时代成员之一。2004年在第八届SM青少年选拔大赛歌王中夺得第一名，进入韩国SM娱乐有限公司开始练习生生涯。2007年8月以演唱团体少女时代成员身份正式出道。'},
+		{title:'太阳',author:'东永裴',date:'1988.5.18',kt:'歌手电台-梦想的声音',src:'img/singer/2.jpg',ms:'简介：东永裴(동영배)，本名董永培，艺名太阳(태양)，1988年5月18日出生于韩国京畿道议政府市，韩国男歌手，男子演唱组合BIGBANG成员之一。2006年以演唱组合BIGBANG正式出道。'},
+		{title:'胜利',author:'승리 胜利',date:'1990.12.12',kt:'歌手电台-梦想的声音',src:'img/singer/4.jpg',ms:'简介：李胜贤(Lee Seung hyun)，本名李昇炫，艺名승리(胜利)，1990年12月12日出生于光州，韩国歌手、演员、主持人。演唱组合BIGBANG成员。 '},
+		{title:'찬열',author:'朴灿烈',date:'韩国首尔',kt:'歌手电台-梦想的声音',src:'img/singer/3.jpg',ms:'简介：찬열(灿烈)，本名朴灿烈，1992年11月27日出生于韩国首尔，韩国男子演唱组合EXO成员，歌手、演员。2008年，通过参加S.M. Casting System，成功入选并进入SM Entertainment公司成为旗下练习生。2012年2月23日，公开预告teaser，以EXO成员亮相；4月8日，所属组合发行首张迷你专辑《MAMA》，以歌手身份正式出道。'},
+		{title:'泰妍',author:'泰妍',date:'1989.3.9',kt:'歌手电台-梦想的声音',src:'img/singer/6.jpg',ms:'简介：태연(泰妍)，1989年3月9日出生于韩国全罗北道全州市，韩国女歌手、主持人，女子演唱团体少女时代成员之一。2004年在第八届SM青少年选拔大赛歌王中夺得第一名，进入韩国SM娱乐有限公司开始练习生生涯。2007年8月以演唱团体少女时代成员身份正式出道。'},
+		{title:'胜利',author:'승리 胜利',date:'1990.12.12',kt:'歌手电台-梦想的声音',src:'img/singer/4.jpg',ms:'简介：李胜贤(Lee Seung hyun)，本名李昇炫，艺名승리(胜利)，1990年12月12日出生于光州，韩国歌手、演员、主持人。演唱组合BIGBANG成员。 '},
+		{title:'G-D',author:'权志龙',date:'1988.8.18',kt:'歌手电台-梦想的声音',src:'img/singer/1.jpg',ms:'G-DRAGON(权志龙)，1988年8月18日出生于韩国首尔，韩国男歌手，男子演唱组合BIGBANG队长。现今为韩国YG Entertainment公司主要制作人之一。'},
+		{title:'胜利',author:'승리 胜利',date:'1990.12.12',kt:'歌手电台-梦想的声音',src:'img/singer/4.jpg',ms:'简介：李胜贤(Lee Seung hyun)，本名李昇炫，艺名승리(胜利)，1990年12月12日出生于光州，韩国歌手、演员、主持人。演唱组合BIGBANG成员。 '},
+		{title:'찬열',author:'朴灿烈',date:'韩国首尔',kt:'歌手电台-梦想的声音',src:'img/singer/3.jpg',ms:'简介：찬열(灿烈)，本名朴灿烈，1992年11月27日出生于韩国首尔，韩国男子演唱组合EXO成员，歌手、演员。2008年，通过参加S.M. Casting System，成功入选并进入SM Entertainment公司成为旗下练习生。2012年2月23日，公开预告teaser，以EXO成员亮相；4月8日，所属组合发行首张迷你专辑《MAMA》，以歌手身份正式出道。'},
+		{title:'현아',author:'金泫雅',date:'1992.6.6',kt:'歌手电台-梦想的声音',src:'img/singer/5.jpg',ms:'简介：현아(泫雅)，本名为金泫雅，1992年6月6日出生于韩国首尔，韩国女歌手、主持人、舞者，前女子演唱组合4MINUTE成员。2007年以演唱组合Wonder Girls出道，其后因身体问题退出组合，被迫休养。2009年重返演艺圈，以4MINUTE组合再次出道，担任Rapper以及副领舞的职务。'},
+		{title:'泰妍',author:'泰妍',date:'1989.3.9',kt:'歌手电台-梦想的声音',src:'img/singer/6.jpg',ms:'简介：태연(泰妍)，1989年3月9日出生于韩国全罗北道全州市，韩国女歌手、主持人，女子演唱团体少女时代成员之一。2004年在第八届SM青少年选拔大赛歌王中夺得第一名，进入韩国SM娱乐有限公司开始练习生生涯。2007年8月以演唱团体少女时代成员身份正式出道。'},
+		{title:'太阳',author:'东永裴',date:'1988.5.18',kt:'歌手电台-梦想的声音',src:'img/singer/2.jpg',ms:'简介：东永裴(동영배)，本名董永培，艺名太阳(태양)，1988年5月18日出生于韩国京畿道议政府市，韩国男歌手，男子演唱组合BIGBANG成员之一。2006年以演唱组合BIGBANG正式出道。'},
+		{title:'胜利',author:'승리 胜利',date:'1990.12.12',kt:'歌手电台-梦想的声音',src:'img/singer/4.jpg',ms:'简介：李胜贤(Lee Seung hyun)，本名李昇炫，艺名승리(胜利)，1990年12月12日出生于光州，韩国歌手、演员、主持人。演唱组合BIGBANG成员。 '},
+		{title:'찬열',author:'朴灿烈',date:'韩国首尔',kt:'歌手电台-梦想的声音',src:'img/singer/3.jpg',ms:'简介：찬열(灿烈)，本名朴灿烈，1992年11月27日出生于韩国首尔，韩国男子演唱组合EXO成员，歌手、演员。2008年，通过参加S.M. Casting System，成功入选并进入SM Entertainment公司成为旗下练习生。2012年2月23日，公开预告teaser，以EXO成员亮相；4月8日，所属组合发行首张迷你专辑《MAMA》，以歌手身份正式出道。'},
+		{title:'泰妍',author:'泰妍',date:'1989.3.9',kt:'歌手电台-梦想的声音',src:'img/singer/6.jpg',ms:'简介：태연(泰妍)，1989年3月9日出生于韩国全罗北道全州市，韩国女歌手、主持人，女子演唱团体少女时代成员之一。2004年在第八届SM青少年选拔大赛歌王中夺得第一名，进入韩国SM娱乐有限公司开始练习生生涯。2007年8月以演唱团体少女时代成员身份正式出道。'},
+		{title:'胜利',author:'승리 胜利',date:'1990.12.12',kt:'歌手电台-梦想的声音',src:'img/singer/4.jpg',ms:'简介：李胜贤(Lee Seung hyun)，本名李昇炫，艺名승리(胜利)，1990年12月12日出生于光州，韩国歌手、演员、主持人。演唱组合BIGBANG成员。 '},
+		{title:'G-D',author:'权志龙',date:'1988.8.18',kt:'歌手电台-梦想的声音',src:'img/singer/1.jpg',ms:'G-DRAGON(权志龙)，1988年8月18日出生于韩国首尔，韩国男歌手，男子演唱组合BIGBANG队长。现今为韩国YG Entertainment公司主要制作人之一。'},
+		{title:'胜利',author:'승리 胜利',date:'1990.12.12',kt:'歌手电台-梦想的声音',src:'img/singer/4.jpg',ms:'简介：李胜贤(Lee Seung hyun)，本名李昇炫，艺名승리(胜利)，1990年12月12日出生于光州，韩国歌手、演员、主持人。演唱组合BIGBANG成员。 '},
+		{title:'찬열',author:'朴灿烈',date:'韩国首尔',kt:'歌手电台-梦想的声音',src:'img/singer/3.jpg',ms:'简介：찬열(灿烈)，本名朴灿烈，1992年11月27日出生于韩国首尔，韩国男子演唱组合EXO成员，歌手、演员。2008年，通过参加S.M. Casting System，成功入选并进入SM Entertainment公司成为旗下练习生。2012年2月23日，公开预告teaser，以EXO成员亮相；4月8日，所属组合发行首张迷你专辑《MAMA》，以歌手身份正式出道。'},
+		{title:'현아',author:'金泫雅',date:'1992.6.6',kt:'歌手电台-梦想的声音',src:'img/singer/5.jpg',ms:'简介：현아(泫雅)，本名为金泫雅，1992年6月6日出生于韩国首尔，韩国女歌手、主持人、舞者，前女子演唱组合4MINUTE成员。2007年以演唱组合Wonder Girls出道，其后因身体问题退出组合，被迫休养。2009年重返演艺圈，以4MINUTE组合再次出道，担任Rapper以及副领舞的职务。'},
+		{title:'泰妍',author:'泰妍',date:'1989.3.9',kt:'歌手电台-梦想的声音',src:'img/singer/6.jpg',ms:'简介：태연(泰妍)，1989年3月9日出生于韩国全罗北道全州市，韩国女歌手、主持人，女子演唱团体少女时代成员之一。2004年在第八届SM青少年选拔大赛歌王中夺得第一名，进入韩国SM娱乐有限公司开始练习生生涯。2007年8月以演唱团体少女时代成员身份正式出道。'},
+		{title:'太阳',author:'东永裴',date:'1988.5.18',kt:'歌手电台-梦想的声音',src:'img/singer/2.jpg',ms:'简介：东永裴(동영배)，本名董永培，艺名太阳(태양)，1988年5月18日出生于韩国京畿道议政府市，韩国男歌手，男子演唱组合BIGBANG成员之一。2006年以演唱组合BIGBANG正式出道。'},
+		{title:'胜利',author:'승리 胜利',date:'1990.12.12',kt:'歌手电台-梦想的声音',src:'img/singer/4.jpg',ms:'简介：李胜贤(Lee Seung hyun)，本名李昇炫，艺名승리(胜利)，1990年12月12日出生于光州，韩国歌手、演员、主持人。演唱组合BIGBANG成员。 '},
+		{title:'찬열',author:'朴灿烈',date:'韩国首尔',kt:'歌手电台-梦想的声音',src:'img/singer/3.jpg',ms:'简介：찬열(灿烈)，本名朴灿烈，1992年11月27日出生于韩国首尔，韩国男子演唱组合EXO成员，歌手、演员。2008年，通过参加S.M. Casting System，成功入选并进入SM Entertainment公司成为旗下练习生。2012年2月23日，公开预告teaser，以EXO成员亮相；4月8日，所属组合发行首张迷你专辑《MAMA》，以歌手身份正式出道。'},
+		{title:'泰妍',author:'泰妍',date:'1989.3.9',kt:'歌手电台-梦想的声音',src:'img/singer/6.jpg',ms:'简介：태연(泰妍)，1989年3月9日出生于韩国全罗北道全州市，韩国女歌手、主持人，女子演唱团体少女时代成员之一。2004年在第八届SM青少年选拔大赛歌王中夺得第一名，进入韩国SM娱乐有限公司开始练习生生涯。2007年8月以演唱团体少女时代成员身份正式出道。'},
+		{title:'胜利',author:'승리 胜利',date:'1990.12.12',kt:'歌手电台-梦想的声音',src:'img/singer/4.jpg',ms:'简介：李胜贤(Lee Seung hyun)，本名李昇炫，艺名승리(胜利)，1990年12月12日出生于光州，韩国歌手、演员、主持人。演唱组合BIGBANG成员。 '},
+		{title:'G-D',author:'权志龙',date:'1988.8.18',kt:'歌手电台-梦想的声音',src:'img/singer/1.jpg',ms:'G-DRAGON(权志龙)，1988年8月18日出生于韩国首尔，韩国男歌手，男子演唱组合BIGBANG队长。现今为韩国YG Entertainment公司主要制作人之一。'},
+		{title:'胜利',author:'승리 胜利',date:'1990.12.12',kt:'歌手电台-梦想的声音',src:'img/singer/4.jpg',ms:'简介：李胜贤(Lee Seung hyun)，本名李昇炫，艺名승리(胜利)，1990年12月12日出生于光州，韩国歌手、演员、主持人。演唱组合BIGBANG成员。 '},
+		{title:'찬열',author:'朴灿烈',date:'韩国首尔',kt:'歌手电台-梦想的声音',src:'img/singer/3.jpg',ms:'简介：찬열(灿烈)，本名朴灿烈，1992年11月27日出生于韩国首尔，韩国男子演唱组合EXO成员，歌手、演员。2008年，通过参加S.M. Casting System，成功入选并进入SM Entertainment公司成为旗下练习生。2012年2月23日，公开预告teaser，以EXO成员亮相；4月8日，所属组合发行首张迷你专辑《MAMA》，以歌手身份正式出道。'},
+		{title:'현아',author:'金泫雅',date:'1992.6.6',kt:'歌手电台-梦想的声音',src:'img/singer/5.jpg',ms:'简介：현아(泫雅)，本名为金泫雅，1992年6月6日出生于韩国首尔，韩国女歌手、主持人、舞者，前女子演唱组合4MINUTE成员。2007年以演唱组合Wonder Girls出道，其后因身体问题退出组合，被迫休养。2009年重返演艺圈，以4MINUTE组合再次出道，担任Rapper以及副领舞的职务。'},
+		{title:'泰妍',author:'泰妍',date:'1989.3.9',kt:'歌手电台-梦想的声音',src:'img/singer/6.jpg',ms:'简介：태연(泰妍)，1989年3月9日出生于韩国全罗北道全州市，韩国女歌手、主持人，女子演唱团体少女时代成员之一。2004年在第八届SM青少年选拔大赛歌王中夺得第一名，进入韩国SM娱乐有限公司开始练习生生涯。2007年8月以演唱团体少女时代成员身份正式出道。'},
+		{title:'太阳',author:'东永裴',date:'1988.5.18',kt:'歌手电台-梦想的声音',src:'img/singer/2.jpg',ms:'简介：东永裴(동영배)，本名董永培，艺名太阳(태양)，1988年5月18日出生于韩国京畿道议政府市，韩国男歌手，男子演唱组合BIGBANG成员之一。2006年以演唱组合BIGBANG正式出道。'},
+		{title:'胜利',author:'승리 胜利',date:'1990.12.12',kt:'歌手电台-梦想的声音',src:'img/singer/4.jpg',ms:'简介：李胜贤(Lee Seung hyun)，本名李昇炫，艺名승리(胜利)，1990年12月12日出生于光州，韩国歌手、演员、主持人。演唱组合BIGBANG成员。 '},
+		{title:'찬열',author:'朴灿烈',date:'韩国首尔',kt:'歌手电台-梦想的声音',src:'img/singer/3.jpg',ms:'简介：찬열(灿烈)，本名朴灿烈，1992年11月27日出生于韩国首尔，韩国男子演唱组合EXO成员，歌手、演员。2008年，通过参加S.M. Casting System，成功入选并进入SM Entertainment公司成为旗下练习生。2012年2月23日，公开预告teaser，以EXO成员亮相；4月8日，所属组合发行首张迷你专辑《MAMA》，以歌手身份正式出道。'},
+		{title:'泰妍',author:'泰妍',date:'1989.3.9',kt:'歌手电台-梦想的声音',src:'img/singer/6.jpg',ms:'简介：태연(泰妍)，1989年3月9日出生于韩国全罗北道全州市，韩国女歌手、主持人，女子演唱团体少女时代成员之一。2004年在第八届SM青少年选拔大赛歌王中夺得第一名，进入韩国SM娱乐有限公司开始练习生生涯。2007年8月以演唱团体少女时代成员身份正式出道。'},
+		{title:'胜利',author:'승리 胜利',date:'1990.12.12',kt:'歌手电台-梦想的声音',src:'img/singer/4.jpg',ms:'简介：李胜贤(Lee Seung hyun)，本名李昇炫，艺名승리(胜利)，1990年12月12日出生于光州，韩国歌手、演员、主持人。演唱组合BIGBANG成员。 '},
+		{title:'G-D',author:'权志龙',date:'1988.8.18',kt:'歌手电台-梦想的声音',src:'img/singer/1.jpg',ms:'G-DRAGON(权志龙)，1988年8月18日出生于韩国首尔，韩国男歌手，男子演唱组合BIGBANG队长。现今为韩国YG Entertainment公司主要制作人之一。'},
+		{title:'胜利',author:'승리 胜利',date:'1990.12.12',kt:'歌手电台-梦想的声音',src:'img/singer/4.jpg',ms:'简介：李胜贤(Lee Seung hyun)，本名李昇炫，艺名승리(胜利)，1990年12月12日出生于光州，韩国歌手、演员、主持人。演唱组合BIGBANG成员。 '},
+		{title:'찬열',author:'朴灿烈',date:'韩国首尔',kt:'歌手电台-梦想的声音',src:'img/singer/3.jpg',ms:'简介：찬열(灿烈)，本名朴灿烈，1992年11月27日出生于韩国首尔，韩国男子演唱组合EXO成员，歌手、演员。2008年，通过参加S.M. Casting System，成功入选并进入SM Entertainment公司成为旗下练习生。2012年2月23日，公开预告teaser，以EXO成员亮相；4月8日，所属组合发行首张迷你专辑《MAMA》，以歌手身份正式出道。'},
+		{title:'현아',author:'金泫雅',date:'1992.6.6',kt:'歌手电台-梦想的声音',src:'img/singer/5.jpg',ms:'简介：현아(泫雅)，本名为金泫雅，1992年6月6日出生于韩国首尔，韩国女歌手、主持人、舞者，前女子演唱组合4MINUTE成员。2007年以演唱组合Wonder Girls出道，其后因身体问题退出组合，被迫休养。2009年重返演艺圈，以4MINUTE组合再次出道，担任Rapper以及副领舞的职务。'},
+		{title:'泰妍',author:'泰妍',date:'1989.3.9',kt:'歌手电台-梦想的声音',src:'img/singer/6.jpg',ms:'简介：태연(泰妍)，1989年3月9日出生于韩国全罗北道全州市，韩国女歌手、主持人，女子演唱团体少女时代成员之一。2004年在第八届SM青少年选拔大赛歌王中夺得第一名，进入韩国SM娱乐有限公司开始练习生生涯。2007年8月以演唱团体少女时代成员身份正式出道。'},
+		{title:'太阳',author:'东永裴',date:'1988.5.18',kt:'歌手电台-梦想的声音',src:'img/singer/2.jpg',ms:'简介：东永裴(동영배)，本名董永培，艺名太阳(태양)，1988年5月18日出生于韩国京畿道议政府市，韩国男歌手，男子演唱组合BIGBANG成员之一。2006年以演唱组合BIGBANG正式出道。'},
+		{title:'泰妍',author:'泰妍',date:'1989.3.9',kt:'歌手电台-梦想的声音',src:'img/singer/6.jpg',ms:'简介：태연(泰妍)，1989年3月9日出生于韩国全罗北道全州市，韩国女歌手、主持人，女子演唱团体少女时代成员之一。2004年在第八届SM青少年选拔大赛歌王中夺得第一名，进入韩国SM娱乐有限公司开始练习生生涯。2007年8月以演唱团体少女时代成员身份正式出道。'},
+		{title:'胜利',author:'승리 胜利',date:'1990.12.12',kt:'歌手电台-梦想的声音',src:'img/singer/4.jpg',ms:'简介：李胜贤(Lee Seung hyun)，本名李昇炫，艺名승리(胜利)，1990年12月12日出生于光州，韩国歌手、演员、主持人。演唱组合BIGBANG成员。 '},
+		{title:'G-D',author:'权志龙',date:'1988.8.18',kt:'歌手电台-梦想的声音',src:'img/singer/1.jpg',ms:'G-DRAGON(权志龙)，1988年8月18日出生于韩国首尔，韩国男歌手，男子演唱组合BIGBANG队长。现今为韩国YG Entertainment公司主要制作人之一。'},
+		{title:'胜利',author:'승리 胜利',date:'1990.12.12',kt:'歌手电台-梦想的声音',src:'img/singer/4.jpg',ms:'简介：李胜贤(Lee Seung hyun)，本名李昇炫，艺名승리(胜利)，1990年12月12日出生于光州，韩国歌手、演员、主持人。演唱组合BIGBANG成员。 '},
+		{title:'G-D',author:'权志龙',date:'1988.8.18',kt:'歌手电台-梦想的声音',src:'img/singer/1.jpg',ms:'G-DRAGON(权志龙)，1988年8月18日出生于韩国首尔，韩国男歌手，男子演唱组合BIGBANG队长。现今为韩国YG Entertainment公司主要制作人之一。'},
+		{title:'胜利',author:'승리 胜利',date:'1990.12.12',kt:'歌手电台-梦想的声音',src:'img/singer/4.jpg',ms:'简介：李胜贤(Lee Seung hyun)，本名李昇炫，艺名승리(胜利)，1990年12月12日出生于光州，韩国歌手、演员、主持人。演唱组合BIGBANG成员。 '},
+		{title:'찬열',author:'朴灿烈',date:'韩国首尔',kt:'歌手电台-梦想的声音',src:'img/singer/3.jpg',ms:'简介：찬열(灿烈)，本名朴灿烈，1992年11月27日出生于韩国首尔，韩国男子演唱组合EXO成员，歌手、演员。2008年，通过参加S.M. Casting System，成功入选并进入SM Entertainment公司成为旗下练习生。2012年2月23日，公开预告teaser，以EXO成员亮相；4月8日，所属组合发行首张迷你专辑《MAMA》，以歌手身份正式出道。'},
+		{title:'泰妍',author:'泰妍',date:'1989.3.9',kt:'歌手电台-梦想的声音',src:'img/singer/6.jpg',ms:'简介：태연(泰妍)，1989年3月9日出生于韩国全罗北道全州市，韩国女歌手、主持人，女子演唱团体少女时代成员之一。2004年在第八届SM青少年选拔大赛歌王中夺得第一名，进入韩国SM娱乐有限公司开始练习生生涯。2007年8月以演唱团体少女时代成员身份正式出道。'},
+		{title:'胜利',author:'승리 胜利',date:'1990.12.12',kt:'歌手电台-梦想的声音',src:'img/singer/4.jpg',ms:'简介：李胜贤(Lee Seung hyun)，本名李昇炫，艺名승리(胜利)，1990年12月12日出生于光州，韩国歌手、演员、主持人。演唱组合BIGBANG成员。 '},
+		{title:'G-D',author:'权志龙',date:'1988.8.18',kt:'歌手电台-梦想的声音',src:'img/singer/1.jpg',ms:'G-DRAGON(权志龙)，1988年8月18日出生于韩国首尔，韩国男歌手，男子演唱组合BIGBANG队长。现今为韩国YG Entertainment公司主要制作人之一。'},
+		{title:'胜利',author:'승리 胜利',date:'1990.12.12',kt:'歌手电台-梦想的声音',src:'img/singer/4.jpg',ms:'简介：李胜贤(Lee Seung hyun)，本名李昇炫，艺名승리(胜利)，1990年12月12日出生于光州，韩国歌手、演员、主持人。演唱组合BIGBANG成员。 '},
+		{title:'泰妍',author:'泰妍',date:'1989.3.9',kt:'歌手电台-梦想的声音',src:'img/singer/6.jpg',ms:'简介：태연(泰妍)，1989年3月9日出生于韩国全罗北道全州市，韩国女歌手、主持人，女子演唱团体少女时代成员之一。2004年在第八届SM青少年选拔大赛歌王中夺得第一名，进入韩国SM娱乐有限公司开始练习生生涯。2007年8月以演唱团体少女时代成员身份正式出道。'},
+		{title:'胜利',author:'승리 胜利',date:'1990.12.12',kt:'歌手电台-梦想的声音',src:'img/singer/4.jpg',ms:'简介：李胜贤(Lee Seung hyun)，本名李昇炫，艺名승리(胜利)，1990年12月12日出生于光州，韩国歌手、演员、主持人。演唱组合BIGBANG成员。 '},
+		{title:'G-D',author:'权志龙',date:'1988.8.18',kt:'歌手电台-梦想的声音',src:'img/singer/1.jpg',ms:'G-DRAGON(权志龙)，1988年8月18日出生于韩国首尔，韩国男歌手，男子演唱组合BIGBANG队长。现今为韩国YG Entertainment公司主要制作人之一。'},
+		{title:'G-D',author:'权志龙',date:'1988.8.18',kt:'歌手电台-梦想的声音',src:'img/singer/1.jpg',ms:'G-DRAGON(权志龙)，1988年8月18日出生于韩国首尔，韩国男歌手，男子演唱组合BIGBANG队长。现今为韩国YG Entertainment公司主要制作人之一。'},
+		];
+	</script>
+	<script type="text/javascript" src="js/index.js"></script>
+
+</body>
+</html>
